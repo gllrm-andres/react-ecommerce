@@ -11,7 +11,11 @@ module.exports = {
       "3/10": "30%",
       full: "100%",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Open Sans Condensed", "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {},
