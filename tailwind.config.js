@@ -15,10 +15,19 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans Condensed", "sans-serif"],
       },
+      transitionDuration: {
+        0: "0ms",
+        "6s": "6s",
+      },
+      transitionTimingFunction: {
+        expand: "cubic-bezier(0.25, 0.45, 0.45, 0.95)",
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ["group-hover"],
+    },
   },
   plugins: [],
 };
