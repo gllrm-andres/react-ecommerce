@@ -45,8 +45,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className="flex flex-wrap gap-4 justify-between w-full ">
-        {this.state.sections.map(({ title, id, imageUrl, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
