@@ -1,15 +1,18 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/homepage/homepage.component";
-
-const HatsPage = () => (
-  <h1 className="text-8xl font-bold text-purple-700 uppercase"> Hats Page</h1>
-);
+import ShopPage from "./pages/shop/shop.component";
+import Header from "./components/header/header.component";
 
 function App() {
   return (
     <Router>
-      <Route exact path="/" component={HomePage}></Route>
-      <Route path="/shop/hats" component={HatsPage}></Route>
+      <div className="mx-4">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage}></Route>
+          <Route path="/shop" component={ShopPage}></Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
